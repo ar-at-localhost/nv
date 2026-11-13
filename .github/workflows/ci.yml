@@ -1,0 +1,17 @@
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  checks:
+    name: Nix flake check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: cachix/install-nix-action@v31
+
+      - name: Run flake checks
+        env:
+          NIXPKGS_ALLOW_UNFREE: 1
+        run: nix flake check --impure

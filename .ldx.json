@@ -1,0 +1,7 @@
+[
+  "vim",
+  "luv",
+  ".#yalms",
+  "nixpkgs:vimPlugins.orgmode",
+  "nixpkgs:vimPlugins.snacks-nvim"
+]

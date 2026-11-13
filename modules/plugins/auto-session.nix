@@ -1,0 +1,11 @@
+{
+  plugins.auto-session.settings = {
+    auto_create = true;
+    auto_save = true;
+    auto_restore = true;
+    single_session_mode = true;
+    close_filetypes_on_save = ["checkhealth" "neo-tree" "snacks_terminal" "terminal"];
+    root_dir.__raw = "NP.dirs.sessions";
+    post_restore_cmds = ["Neotree show"];
+  };
+}

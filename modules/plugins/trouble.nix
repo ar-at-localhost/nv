@@ -1,0 +1,3 @@
+{
+  plugins.trouble.settings = {};
+}

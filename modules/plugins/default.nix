@@ -1,0 +1,66 @@
+{pkgs, ...}: {
+  imports = [
+    ./auto-session.nix
+    ./blink-cmp.nix
+    ./bufferline.nix
+    ./colorizer.nix
+    ./conform.nix
+    ./edgy.nix
+    ./fzf-lua.nix
+    ./lualine.nix
+    ./luasnip.nix
+    ./mini.nix
+    ./navic.nix
+    ./neotree.nix
+    ./noice.nix
+    ./none-ls.nix
+    ./snacks.nix
+    ./which-key.nix
+  ];
+
+  plugins = {
+    auto-session.enable = true;
+    blink-cmp.enable = true;
+    bufferline.enable = true;
+    colorizer.enable = true;
+    conform-nvim.enable = true;
+    dap.enable = true;
+    dap-ui.enable = true;
+    dap-view.enable = true;
+    dap-virtual-text.enable = true;
+    diffview.enable = true;
+    edgy.enable = true;
+    emmet.enable = true;
+    fzf-lua.enable = false;
+    friendly-snippets.enable = true;
+    gitsigns.enable = true;
+    git-conflict.enable = true;
+    grug-far.enable = true;
+    lsp.enable = true;
+    lsp-signature.enable = true;
+    lsp-status.enable = true;
+    lualine.enable = true;
+    luasnip.enable = true;
+    markview.enable = true;
+    mini.enable = true;
+    navic.enable = true;
+    neogit.enable = true;
+    neo-tree.enable = true;
+    noice.enable = true;
+    none-ls.enable = true;
+    nui.enable = true;
+    snacks.enable = true;
+    todo-comments.enable = true;
+    ts-autotag.enable = true;
+    ts-comments.enable = true;
+    treesitter.enable = true;
+    trouble.enable = true;
+    web-devicons.enable = true;
+    which-key.enable = true;
+  };
+
+  extraPlugins = with pkgs.vimPlugins; [
+    plenary-nvim
+    nvim-lsp-file-operations
+  ];
+}
