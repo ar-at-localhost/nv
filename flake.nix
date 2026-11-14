@@ -75,6 +75,17 @@
           }).config.build.package;
     };
   in {
+    apps = forEachSupportedSystem (
+      {pkgs, ...}: let
+        outputs = mkOutputs pkgs;
+      in {
+        default = {
+          type = "app";
+          program = "${outputs.default}/bin/nvim";
+        };
+      }
+    );
+
     devShells = forEachSupportedSystem (
       {pkgs, ...}: {
         default = pkgs.mkShell {
