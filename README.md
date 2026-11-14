@@ -11,6 +11,14 @@ Contributions are also welcome.
 > This is an opinionated configuration and may not suit everyone's taste. It prioritizes a fluid
 > editing experience and a rich feature set.
 
+## Quick run
+
+To run without installing (e.g., for a demo), run the following:
+
+```nix
+NIXPKGS_ALLOW_UNFREE=1 nix run --impure git+https://github.com/ar-at-localhost/nv.git
+```
+
 ## Usage / Installation
 
 ### Add to flake
