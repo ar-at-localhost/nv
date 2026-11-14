@@ -113,11 +113,7 @@
       (_: prev: (let
         outputs = mkOutputs prev;
       in {
-        vimPlugins =
-          prev.vimPlugins
-          // {
-            tw = outputs.vimPlugin;
-          };
+        nv = outputs.default;
       }))
     ];
 
