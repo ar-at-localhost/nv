@@ -20,7 +20,9 @@ _: {
       ];
 
       lualine_x = [
+        # TODO: Recording indicator 
         "diagnostics"
+        # FIXME: Replace with Lsp Status
         {
           __unkeyed-1 = {
             __raw = ''
