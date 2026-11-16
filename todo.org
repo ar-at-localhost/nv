@@ -1,0 +1,3 @@
+#+title: Opinionated Nixvim Configuration
+#+author: Ahmad Raza <pro.se.ahmad.raza.1@gmail.com>
+#+filetags: :todo:
