@@ -33,28 +33,18 @@ _: {
 
           icon = "⏺️";
         }
-        # FIXME: Replace with Lsp Status
         {
           __unkeyed-1 = {
             __raw = ''
               function()
-                  local msg = ""
-                  local buf_ft = vim.bo[0].filetype
-                  local clients = vim.lsp.get_clients({ bufnr = 0 })
-                  if next(clients) == nil then
-                      return msg
-                  end
-                  for _, client in ipairs(clients) do
-                      local filetypes = client.config.filetypes
-                      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-                          return client.name
-                      end
-                  end
-                  return msg
+                local ok, status = pcall(function ()
+                  return require('lsp-status').status()
+                end)
+
+                return (ok and status) or ""
               end
             '';
           };
-          icon = "  ";
         }
         "encoding"
         "fileformat"
