@@ -20,8 +20,19 @@ _: {
       ];
 
       lualine_x = [
-        # TODO: Recording indicator 
         "diagnostics"
+        {
+          __unkeyed-1 = {
+            __raw = ''
+              function()
+                local reg = vim.fn.reg_recording()
+                return (reg ~= "" and reg) or ""
+              end
+            '';
+          };
+
+          icon = "⏺️";
+        }
         # FIXME: Replace with Lsp Status
         {
           __unkeyed-1 = {
