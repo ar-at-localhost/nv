@@ -1,9 +1,13 @@
 {
   config,
+  inputs,
   lib,
   ...
 }: {
-  imports = [./yalms.nix];
+  imports = [
+    ./yalms.nix
+    inputs.orgnomics.nixvimModules.orgnomics
+  ];
 
   options.nv.xtras.orgmode.enable = lib.mkOption {
     type = lib.types.bool;
