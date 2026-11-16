@@ -7,7 +7,7 @@
   cfg = config;
 in {
   imports = [
-    inputs.orgnomics.nixvimModules.orgnomics
+    inputs.yalms.nixvimModules.yalms
   ];
 
   options.nv.xtras.yalms.enable = lib.mkOption {
@@ -17,6 +17,6 @@ in {
   };
 
   config = lib.mkIf cfg.nv.xtras.yalms.enable {
-    plugins.orgnomics.enable = true;
+    plugins.yalms.enable = true;
   };
 }
