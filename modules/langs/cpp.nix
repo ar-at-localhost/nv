@@ -16,6 +16,7 @@
 
   config = lib.mkIf config.nv.langs.cpp.enable {
     lsp.servers.clangd.enable = true;
+    nv.langs.make.enable = lib.mkDefault true;
 
     plugins.treesitter.grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       c
