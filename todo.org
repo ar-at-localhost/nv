@@ -1,3 +1,6 @@
 #+title: Opinionated Nixvim Configuration
 #+author: Ahmad Raza <pro.se.ahmad.raza.1@gmail.com>
 #+filetags: :todo:
+
+* TODO Disable inlay hints by default 
+  Inlay hints often cause too much noise. They can be toggled anytime anyway. Keeping them disabled by default will keep it zen. 
