@@ -1,0 +1,16 @@
+#+title: Docs - Opinionated Nixvim Configuration
+#+author: Ahmad Raza <pro.se.ahmad.raza.1@gmail.com>
+#+filetags: :todo:
+
+* Docs
+
+  This document explains the configuration decisions and defaults.
+
+** Reading this document 
+
+*** Abbreviations
+| Abbr.  | Explanation
+| ~<L>~ | Leader key, used in keybindings.
+
+** Developer Experience
+  + No inlay hints by default. They add visual noise. Use ~<L>uh~ to toggle them.
