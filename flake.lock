@@ -528,11 +528,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794831922,
-        "narHash": "sha256-Iz1LDwfXxj+TTmKPIjqCH7tDnybx/U6v14h8Ua3eLzQ=",
+        "lastModified": 1794885663,
+        "narHash": "sha256-XYUh67ScyNkxQWF2QCmB5eiidWQks4jvENuSeFA5Gts=",
         "owner": "ar-at-localhost",
         "repo": "yalms",
-        "rev": "c6808484788b3ecec8604c7665e1db76f7dccd91",
+        "rev": "07ad6b32b8e3db4f7eabc4a036084a300a968d93",
         "type": "github"
       },
       "original": {
