@@ -18,7 +18,6 @@
   config = lib.mkIf config.nv.xtras.orgmode.enable {
     plugins = {
       orgmode.enable = true;
-
       orgnomics = {
         enable = true;
 
@@ -56,6 +55,8 @@
           icon = "";
         }
       ];
+
+      yalms.enable = true;
     };
 
     keymaps = [
