@@ -6,4 +6,10 @@
     action = "<cmd>nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>";
     options.desc = "Redraw / Clear hlsearch / Diff update";
   }
+  {
+    mode = "n";
+    key = "<leader>up";
+    action = "<cmd>Markview<CR>";
+    options.desc = "Toggle Preview";
+  }
 ]
