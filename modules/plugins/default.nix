@@ -15,6 +15,7 @@
     ./noice.nix
     ./none-ls.nix
     ./snacks.nix
+    ./trouble.nix
     ./which-key.nix
   ];
 
@@ -37,7 +38,6 @@
     git-conflict.enable = true;
     grug-far.enable = true;
     lsp.enable = true;
-    lsp-signature.enable = true;
     lsp-status.enable = true;
     lualine.enable = true;
     luasnip.enable = true;

@@ -62,28 +62,45 @@
       pkgs,
       system,
       ...
-    }: {
-      yalms = pkgs.vimPlugins.yalms;
-      default =
-        (inputs.nixvim.lib.evalNixvim
-          {
-            inherit system;
-            modules = [./modules];
-            extraSpecialArgs = {
-              inherit inputs pkgs;
-            };
-          }).config.build.package;
+    }: let
+      base =
+        inputs.nixvim.lib.evalNixvim
+        {
+          inherit system;
+          modules = [./modules];
+          extraSpecialArgs = {
+            inherit inputs pkgs;
+          };
+        };
+    in {
+      default = base.config.build.package;
+      langed =
+        (base.extendModules {
+          modules = [
+            {
+              nv.langs.enableAll = true;
+            }
+          ];
+        }).config.build.package;
+      web =
+        (base.extendModules {
+          modules = [
+            {
+              nv.langs.astro.enable = true;
+            }
+          ];
+        }).config.build.package;
     };
   in {
     apps = forEachSupportedSystem (
       {pkgs, ...}: let
         outputs = mkOutputs pkgs;
-      in {
-        default = {
+      in
+        builtins.mapAttrs (_k: v: {
           type = "app";
-          program = "${outputs.default}/bin/nvim";
-        };
-      }
+          program = "${v}/bin/nvim";
+        })
+        outputs
     );
 
     devShells = forEachSupportedSystem (
@@ -103,7 +120,11 @@
     );
 
     packages = forEachSupportedSystem (
-      {pkgs, ...}: mkOutputs pkgs
+      {pkgs, ...}:
+        (mkOutputs pkgs)
+        // {
+          yalms = pkgs.vimPlugins.yalms;
+        }
     );
 
     overlays.default = nixpkgs.lib.composeManyExtensions [
@@ -114,6 +135,8 @@
         outputs = mkOutputs prev;
       in {
         nv = outputs.default;
+        nvl = outputs.langed;
+        nvw = outputs.web;
       }))
     ];
 

@@ -22,10 +22,10 @@ in {
   config = lib.mkIf config.nv.langs.web.enable {
     nv = {
       langs = {
+        css.enable = true;
         javascript.enable = true;
         sql.enable = true;
         xml.enable = true;
-        css.enable = true;
       };
     };
 

@@ -1,6 +1,5 @@
 _: {
   lsp = {
-    inlayHints.enable = true;
     servers = {
       lua_ls.enable = true;
       jsonls.enable = true;

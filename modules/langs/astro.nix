@@ -15,6 +15,8 @@ in {
   };
 
   config = lib.mkIf config.nv.langs.astro.enable {
+    nv.langs.web.enable = lib.mkDefault true;
+
     lsp.servers = {
       astro = {
         enable = true;
