@@ -15,6 +15,7 @@
     ./noice.nix
     ./none-ls.nix
     ./snacks.nix
+    ./trouble.nix
     ./which-key.nix
   ];
 
