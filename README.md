@@ -97,6 +97,21 @@ A common use case is adding it to development flakes for a personalized editing 
 }
 ```
 
+### Variants
+
+While it is easy to build your own configs using options, two additional variants are available
+from the flake for convenience.
+
+#### Langed (All Languages)
+
+Langed comes with all supported languages enabled out of the box. Use it by adding `nvl` instead of
+`nv` to your package set.
+
+#### Web
+
+Similar to Langed, Web comes with essential web development languages enabled out of the box. Use it
+by adding `nvw` instead of `nv` to your package set.
+
 ## Languages
 
 Several languages are supported. You can enable them by setting the

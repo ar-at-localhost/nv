@@ -131,11 +131,11 @@
         "yalms": "yalms"
       },
       "locked": {
-        "lastModified": 1794544770,
-        "narHash": "sha256-PBR8/016leMKZs0e5FoiUI/bW3JYYY1hqWe5ERAhnpo=",
+        "lastModified": 1795764799,
+        "narHash": "sha256-gwie7LzqgP91pVDXGB0tFMvpdDArVy0qwI2stEGQfa4=",
         "owner": "ar-at-localhost",
         "repo": "ldx",
-        "rev": "c580088c113615f107341df60cc3cbd95d63f080",
+        "rev": "7aed8ac9700ac65de233070633aa5b4d7ffd2b7d",
         "type": "github"
       },
       "original": {
@@ -528,11 +528,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794460623,
-        "narHash": "sha256-OhxkecQDKlVcrs1KKssIzk3fY+Ksuv3jGmHWfNcX8gk=",
+        "lastModified": 1794885663,
+        "narHash": "sha256-XYUh67ScyNkxQWF2QCmB5eiidWQks4jvENuSeFA5Gts=",
         "owner": "ar-at-localhost",
         "repo": "yalms",
-        "rev": "2ee65ede73558adb435eb46d53a394da5b104794",
+        "rev": "07ad6b32b8e3db4f7eabc4a036084a300a968d93",
         "type": "github"
       },
       "original": {

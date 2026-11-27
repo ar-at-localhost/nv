@@ -23,6 +23,7 @@ _: {
     Snacks.toggle.diagnostics():map('<leader>c.d')
     Snacks.toggle.treesitter():map('<leader>c.t')
     Snacks.toggle.indent():map('<leader>ui')
+    Snacks.toggle.inlay_hints():map('<leader>uh')
     Snacks.toggle.option('relativenumber', { name = 'Relative Number' }):map('<leader>un')
   '';
 }

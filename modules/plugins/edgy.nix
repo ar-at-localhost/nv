@@ -51,7 +51,7 @@ _: {
       }
     ];
 
-    left = let
+    right = let
       size = {
         width = 0.15;
       };

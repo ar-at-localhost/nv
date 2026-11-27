@@ -1,9 +1,13 @@
 {
   config,
+  inputs,
   lib,
   ...
 }: {
-  imports = [./yalms.nix];
+  imports = [
+    ./yalms.nix
+    inputs.orgnomics.nixvimModules.orgnomics
+  ];
 
   options.nv.xtras.orgmode.enable = lib.mkOption {
     type = lib.types.bool;
@@ -14,7 +18,6 @@
   config = lib.mkIf config.nv.xtras.orgmode.enable {
     plugins = {
       orgmode.enable = true;
-
       orgnomics = {
         enable = true;
 
@@ -52,6 +55,8 @@
           icon = "";
         }
       ];
+
+      yalms.enable = true;
     };
 
     keymaps = [
