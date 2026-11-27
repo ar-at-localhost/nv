@@ -131,11 +131,11 @@
         "yalms": "yalms"
       },
       "locked": {
-        "lastModified": 1794544770,
-        "narHash": "sha256-PBR8/016leMKZs0e5FoiUI/bW3JYYY1hqWe5ERAhnpo=",
+        "lastModified": 1795764799,
+        "narHash": "sha256-gwie7LzqgP91pVDXGB0tFMvpdDArVy0qwI2stEGQfa4=",
         "owner": "ar-at-localhost",
         "repo": "ldx",
-        "rev": "c580088c113615f107341df60cc3cbd95d63f080",
+        "rev": "7aed8ac9700ac65de233070633aa5b4d7ffd2b7d",
         "type": "github"
       },
       "original": {
